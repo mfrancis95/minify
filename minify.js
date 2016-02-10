@@ -1,8 +1,8 @@
 var request = require("request");
 
 function minifyCSS(css) {
-    return new Promise(function(resolve, reject) {
-        request.post("https://cssminifier.com/raw", {form: {input: css}}, function(error, response, minified) {
+    return new Promise((resolve, reject) => {
+        request.post("https://cssminifier.com/raw", {form: {input: css}}, (error, response, minified) => {
             if (error) {
                 reject(error);
             }
@@ -14,8 +14,8 @@ function minifyCSS(css) {
 }
 
 function minifyJS(js) {
-    return new Promise(function(resolve, reject) {
-        request.post("https://javascript-minifier.com/raw", {form: {input: js}}, function(error, response, minified) {
+    return new Promise((resolve, reject) => {
+        request.post("https://javascript-minifier.com/raw", {form: {input: js}}, (error, response, minified) => {
             if (error) {
                 reject(error);
             }
