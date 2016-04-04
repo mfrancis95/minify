@@ -26,5 +26,5 @@ function minifyJS(js) {
     });
 }
 
-module.exports.css = minifyCSS;
-module.exports.js = minifyJS;
+exports.css = minifyCSS;
+exports.js = minifyJS;
